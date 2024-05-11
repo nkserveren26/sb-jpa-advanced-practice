@@ -24,6 +24,7 @@ public class CluddemoApplication {
 
 	private void createInstructor(AppDAO appDAO) {
 
+		/*
 		// create the instructor
 		Instructor tempInstructor =
 				new Instructor("Chad","Darby", "darby@luv2code.com");
@@ -34,6 +35,20 @@ public class CluddemoApplication {
 						"http://www.luv2code.com/youtube",
 						"Luv 2 code!!!"
 				);
+
+		 */
+
+		// create the instructor
+		Instructor tempInstructor =
+				new Instructor("Madhu","Patel", "madhu@luv2code.com");
+
+		// create the instructor detail
+		InstructorDetail tempInstructorDetail =
+				new InstructorDetail(
+						"http://www.luv2code.com/youtube",
+						"Guitar"
+				);
+
 
 		// associate the objects
 		tempInstructor.setInstructorDetail(tempInstructorDetail);
