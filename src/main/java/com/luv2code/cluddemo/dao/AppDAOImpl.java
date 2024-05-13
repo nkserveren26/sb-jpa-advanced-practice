@@ -1,6 +1,7 @@
 package com.luv2code.cluddemo.dao;
 
 import com.luv2code.cluddemo.entity.Instructor;
+import com.luv2code.cluddemo.entity.InstructorDetail;
 import jakarta.persistence.EntityManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -39,5 +40,10 @@ public class AppDAOImpl implements AppDAO {
         // delete the instructor
         entityManager.remove(tempInstructor);
 
+    }
+
+    @Override
+    public InstructorDetail findInstructorDetailById(int theId) {
+        return entityManager.find(InstructorDetail.class, theId);
     }
 }
