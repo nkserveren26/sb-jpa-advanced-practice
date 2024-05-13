@@ -17,14 +17,19 @@ public class InstructorDetail {
     @Column(name="hobby")
     private String hobby;
 
-    public InstructorDetail() {
+    // add @OneToOne annotation
+    @OneToOne(mappedBy = "instructorDetail", cascade = CascadeType.ALL)
+    private Instructor instructor;
 
+    public Instructor getInstructor() {
+        return instructor;
     }
 
-    public InstructorDetail(String youtubeChannel, String hobby) {
-        this.youtubeChannel = youtubeChannel;
-        this.hobby = hobby;
+    public void setInstructor(Instructor instructor) {
+        this.instructor = instructor;
     }
+
+
 
     public int getId() {
         return id;
@@ -47,6 +52,15 @@ public class InstructorDetail {
     }
 
     public void setHobby(String hobby) {
+        this.hobby = hobby;
+    }
+
+    public InstructorDetail() {
+
+    }
+
+    public InstructorDetail(String youtubeChannel, String hobby) {
+        this.youtubeChannel = youtubeChannel;
         this.hobby = hobby;
     }
 
