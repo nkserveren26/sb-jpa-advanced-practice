@@ -42,7 +42,9 @@ public class CluddemoApplication {
 
 			//updateInstructor(appDAO);
 
-			updateCourse(appDAO);
+			//updateCourse(appDAO);
+
+			deleteInstructor(appDAO);
 		};
 	}
 
